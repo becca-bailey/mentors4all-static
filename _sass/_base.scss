@@ -1,0 +1,68 @@
+// Variables
+
+$max-width: 900px;
+$default-padding: 1em;
+$default-margin: 1em;
+
+// Colors
+
+$background-color: #4ECDC4;
+$light: lighten($background-color, 20);
+$contrast-color: #C8F7C5;
+$dark-gray: lighten(black, 30);
+
+// Breakpoints
+
+$medium: 600px;
+
+// Default Styles
+
+body {
+  text-align: center;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  background-color: $background-color;
+}
+        
+.container {
+  @include outer-container($max-width);
+  @include pad($default-padding);
+  @include media($medium) {
+     min-height: 100vh;
+   }
+ }
+  
+ // Typography
+  
+ a {
+    text-decoration: none;
+ }
+    
+#site-title {
+  font-family: "Concert One", Lato, sans-serif;
+  letter-spacing: 2px;
+  color: white;
+  margin-top: $default-margin * .75;
+  @include media($medium) {
+    font-size: modular-scale(6);
+  }
+}
+
+h1 {
+  font-size: modular-scale(4);
+  margin: 0;
+}
+       
+h2 {
+  font-size: modular-scale(3);
+}
+         
+h3 {
+  font-size: modular-scale(2);
+  font-style: italic;
+  font-weight: 300;
+}
+               
+h4 {
+  font-size: modular-scale(1);
+}
