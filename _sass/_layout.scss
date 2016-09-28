@@ -14,7 +14,7 @@
       @include span-columns(6);
    }
    a { 
-     color: $-gray;
+     color: $dark-gray;
      &::before {
        content: "> "; 
      }
